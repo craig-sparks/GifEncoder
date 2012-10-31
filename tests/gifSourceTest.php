@@ -46,17 +46,17 @@ class GifSourceTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals('50',$source->get_height_dimension(),'Height does not match');
 	}
 	
-    /**
-     * @expectedException Gif_Encoder_Exception
-     */
+	/**
+	 * @expectedException Gif_Encoder_Exception
+	 */
 	public function test_if_exception_is_thrown_if_file_does_not_exist()
 	{
 		new Gif_Source('filedoesnotexist.ext');
 	}
 
-    /**
-     * @expectedException Gif_Encoder_Exception
-     */
+	/**
+	 * @expectedException Gif_Encoder_Exception
+	 */
 	public function test_if_exception_is_thrown_if_file_is_directory()
 	{
 		new Gif_Source('tests/sources/frames/png');
